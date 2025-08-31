@@ -6,7 +6,7 @@ type SectionProps = PropsWithChildren<{ id: string; className?: string }>
 
 export function ScrollSnapContainer({ className, children }: ContainerProps) {
   return (
-    <div className={cn('h-dvh overflow-y-auto snap-y snap-proximity', className)}>
+    <div className={cn('h-dvh overflow-y-auto snap-y snap-mandatory', className)}>
       {children}
     </div>
   )

@@ -4,12 +4,14 @@ import About from './pages/About'
 import Experience from './pages/Experience'
 import Thoughts from './pages/Thoughts'
 import Contact from './pages/Contact'
+import Navbar from './components/ui/Navbar'
 import { ScrollSnapContainer, ScrollSnapSection } from './components/layout/ScrollSnap'
 
 function App() {
 
   return (
     <>
+      <Navbar />
       <ScrollSnapContainer>
         <ScrollSnapSection id="overview">
           <Overview />
