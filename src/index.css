@@ -3,8 +3,8 @@
 @theme {
   --color-background: #171A17;
   --color-foreground: #e5e7eb;
-  --color-primary: #A9B2A9;   /* blue-500 */
-  --color-secondary: #22c55e; /* green-500 */
+  --color-primary: #A9B2A9;
+  --color-secondary: #22c55e;
 }
 
 @layer base {
