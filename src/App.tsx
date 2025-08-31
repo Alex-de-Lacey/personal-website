@@ -5,6 +5,7 @@ import Experience from './pages/Experience'
 import Thoughts from './pages/Thoughts'
 import Contact from './pages/Contact'
 import Navbar from './components/ui/Navbar'
+import PageIndicator from './components/ui/PageIndicator'
 import { ScrollSnapContainer, ScrollSnapSection } from './components/layout/ScrollSnap'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <PageIndicator />
       <ScrollSnapContainer>
         <ScrollSnapSection id="overview">
           <Overview />

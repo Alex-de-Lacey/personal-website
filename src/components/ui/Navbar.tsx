@@ -47,10 +47,11 @@ export default function Navbar() {
       previousScrollY.current = currentScrollY;
     };
 
-    // Find the scroll container
-    const scrollContainer = document.querySelector('.snap-y');
+    // Find the scroll container to hide navbar on scroll
+    let scrollContainer = document.querySelector('.snap-y');
+
     if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleScroll);
+      scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
       return () => scrollContainer.removeEventListener("scroll", handleScroll);
     }
   }, []);
@@ -76,7 +77,6 @@ export default function Navbar() {
     >
       <Container>
         <nav className="flex items-center justify-between py-4">
-          {/* Logo/Brand */}
           <div className="flex items-center">
             <button
               onClick={handleNavClick("overview")}
