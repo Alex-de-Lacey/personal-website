@@ -1,13 +1,14 @@
 import placeholderImage from '../assets/placeholder.jpg'
+import Company from '../components/ui/Company'
 
 export default function Overview() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-12 space-y-16">
-        <section className="flex flex-col md:flex-row items-start md:items-center text-left gap-6">
+        <section className="flex flex-col md:flex-row md:items-center ">
             <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Hi, I'm Alex 👋</h1>
                 <p className="text-lg text-zinc-500 dark:text-zinc-400">
-                    I’m a Product manager by trade. I’m also  product design enthusiast, software developer, but only to the extent it helps me research & ship great products.
+                    I’m a Product manager by trade. I’m also  product design enthusiast, software developer.
                 </p>
                 <p className="text-lg text-zinc-500 dark:text-zinc-400">
                 I currently work at PurchasePlus where I spend most of my time making our platform more streamlined and scalable with software integrations. 
