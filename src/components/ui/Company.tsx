@@ -37,7 +37,7 @@ export default function Company({ img, text, index = 0 }: CompanyProps) {
       <img
         src={img}
         alt="company image"
-        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border border-zinc-700/50"
+        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-green-800/100 transition-transform duration-200 ease-out hover:scale-110"
       />
       <div aria-hidden="true" style={{ height: textHeight }} />
     </div>
