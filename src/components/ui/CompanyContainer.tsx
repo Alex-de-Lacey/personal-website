@@ -2,32 +2,34 @@ import Company from './Company'
 
 type CompanyItem = {
   img?: string
-  text: string
+  companyName: string
+  roleDescription: string
+  whiteBackground?: boolean
 }
 
 type CompanyContainerProps = {
   items: CompanyItem[]
   className?: string
-  start?: number
-  end?: number
+  startYear?: number
+  endYear?: number
 }
 
 function Line() {
   return <div aria-hidden="true" className="h-1 bg-green-800/100 flex-1 rounded-md" />
 }
 
-export default function CompanyContainer({ items, className = '', start=2019, end = new Date().getFullYear() }: CompanyContainerProps) {
+export default function CompanyContainer({ items, className = '', startYear=2019, endYear = new Date().getFullYear() }: CompanyContainerProps) {
   return (
     <div className={`w-full flex items-center${className}`}>
-      <p>{start}</p>
+      <p>{startYear}</p>
       <Line />
       {items.map((item, index) => (
         <>
-          <Company key={`${item.text}-${index}`} img={item.img} text={item.text} index={index} />
+          <Company key={`${item.companyName}-${index}`} img={item.img} companyName={item.companyName} roleDescription={item.roleDescription} index={index} whiteBackground={item.whiteBackground} />
           <Line />
         </>
       ))}
-      <p>{end}</p>
+      <p>{endYear}</p>
     </div>
   )
 }
