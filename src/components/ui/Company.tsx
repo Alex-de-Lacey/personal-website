@@ -2,17 +2,21 @@ import { useLayoutEffect, useRef, useState } from 'react'
 
 type CompanyProps = {
   img?: string
-  text: string
+  companyName: string
+  roleDescription: string
   index?: number
+  whiteBackground?: boolean
 }
 
-export default function Company({ img, text, index = 0 }: CompanyProps) {
+export default function Company({ img, companyName, roleDescription, index = 0, whiteBackground = false }: CompanyProps) {
   const isEven = typeof index === 'number' && index % 2 === 0
-  const textContainerRef = useRef<HTMLDivElement | null>(null)
+  const companyNameRef = useRef<HTMLDivElement | null>(null)
+  const roleDescriptionRef = useRef<HTMLDivElement | null>(null)
   const [textHeight, setTextHeight] = useState(0)
+  const [companyNameHeight, setCompanyNameHeight] = useState(0)
 
   useLayoutEffect(() => {
-    const element = textContainerRef.current
+    const element = roleDescriptionRef.current
     if (!element) return
 
     const updateHeight = () => {
@@ -27,19 +31,40 @@ export default function Company({ img, text, index = 0 }: CompanyProps) {
     return () => {
       resizeObserver.disconnect()
     }
-  }, [])
+  }, [roleDescription])
+
+  useLayoutEffect(() => {
+    const element = companyNameRef.current
+    if (!element) return
+
+    const updateCompanyNameHeight = () => {
+      setCompanyNameHeight(element.offsetHeight || 0)
+    }
+
+    updateCompanyNameHeight()
+
+    const resizeObserver = new ResizeObserver(() => updateCompanyNameHeight())
+    resizeObserver.observe(element)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [companyName])
 
   return (
-    <div className={`flex flex-col gap-2 ${isEven ? '' : 'flex-col-reverse'} items-center`}>
-      <div ref={textContainerRef}>
-        <p>{text}</p>
+    <div className={`company-card flex flex-col gap-2 ${isEven ? '' : 'flex-col-reverse'} items-center group`}>
+      <div aria-hidden="true" style={{ height: Math.max(0, textHeight - companyNameHeight) }} />
+      <div ref={companyNameRef} className="w-24 md:w-36 text-center">
+        <p className="break-words">{companyName}</p>
       </div>
       <img
         src={img}
         alt="company image"
-        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-green-800/100 transition-transform duration-200 ease-out hover:scale-110"
+        className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-green-800/100 transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
       />
-      <div aria-hidden="true" style={{ height: textHeight }} />
+      <div ref={roleDescriptionRef} className="w-24 md:w-36 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <p className="break-words">{roleDescription}</p>
+      </div>
     </div>
   )
 }
