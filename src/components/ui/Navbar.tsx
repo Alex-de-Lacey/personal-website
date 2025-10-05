@@ -11,7 +11,7 @@ import {
 const socials = [
   {
     label: "Email",
-    url: "mailto:hello@example.com",
+    url: "#contact",
     icon: faEnvelope
   },
   {
@@ -88,18 +88,32 @@ export default function Navbar() {
 
           {/* Social Links */}
           <div className="flex items-center space-x-4">
-            {socials.slice(0, socials.length).map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-foreground transition-colors cursor-pointer"
-                aria-label={social.label}
-              >
-                <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
-              </a>
-            ))}
+            {socials.slice(0, socials.length).map((social, index) => {
+              if (social.url.startsWith('#')) {
+                return (
+                  <button
+                    key={index}
+                    onClick={handleNavClick(social.url.substring(1))}
+                    className="text-zinc-400 hover:text-foreground transition-colors cursor-pointer"
+                    aria-label={social.label}
+                  >
+                    <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
+                  </button>
+                );
+              }
+              return (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-foreground transition-colors cursor-pointer"
+                  aria-label={social.label}
+                >
+                  <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
+                </a>
+              );
+            })}
           </div>
         </nav>
       </Container>
