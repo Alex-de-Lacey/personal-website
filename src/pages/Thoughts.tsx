@@ -1,9 +1,7 @@
-import thoughtsImage from '../assets/thoughts.png'
 import PageLayout from "../components/layout/PageLayout"
 import { Section } from '../components/ui/Section'
 import { Heading } from '../components/ui/Heading'
 import { Text } from '../components/ui/Text'
-import { Avatar } from '../components/ui/Avatar'
 import Thought from '../components/ui/Thought'
 
 const thoughts = [
