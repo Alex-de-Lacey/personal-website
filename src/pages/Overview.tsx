@@ -3,7 +3,7 @@ import Company from '../components/ui/Company'
 
 export default function Overview() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12 space-y-16">
+    <main className="max-w-5xl mx-auto">
         <section className="flex flex-col md:flex-row md:items-center ">
             <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Hi, I'm Alex 👋</h1>

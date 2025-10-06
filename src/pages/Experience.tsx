@@ -41,7 +41,7 @@ export default function Experience() {
           { companyName: purchasePlus.companyName, roleDescription: purchasePlus.roleDescription, img: purchasePlus.img, whiteBackground: purchasePlus.whiteBackground },
         ]}
       />
-      <a href="test.io" >Resume</a>
+      <a className = "text-right" href="test.io" >Resume.pdf</a>
     </PageLayout>
     
   )

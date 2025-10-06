@@ -18,10 +18,14 @@ function Line() {
   return <div aria-hidden="true" className="h-1 bg-green-800/100 flex-1 rounded-md" />
 }
 
+function Year({ year }: { year: number }) {
+  return <p className="text-xl font-medium text-green-500/100 m-2">{year}</p>
+}
+
 export default function CompanyContainer({ items, className = '', startYear=2019, endYear = new Date().getFullYear() }: CompanyContainerProps) {
   return (
     <div className={`w-full flex items-center${className}`}>
-      <p>{startYear}</p>
+      <Year year={startYear} />
       <Line />
       {items.map((item, index) => (
         <>
@@ -29,7 +33,7 @@ export default function CompanyContainer({ items, className = '', startYear=2019
           <Line />
         </>
       ))}
-      <p>{endYear}</p>
+      <Year year={endYear} />
     </div>
   )
 }
