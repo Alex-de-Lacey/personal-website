@@ -1,8 +1,6 @@
-import contactImage from '../assets/contact.png'
 import { Section } from '../components/ui/Section'
 import { Heading } from '../components/ui/Heading'
 import { Text } from '../components/ui/Text'
-import { Avatar } from '../components/ui/Avatar'
 import { Button } from '../components/ui/Button'
 import PageLayout from "../components/layout/PageLayout"
 import { useState } from 'react'
