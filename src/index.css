@@ -1,12 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #171A17;
-  --color-foreground: #e5e7eb;
-  --color-primary: #A9B2A9;
-  --color-secondary: #22c55e;
+  --color-background: #02283C;
+  --color-foreground: #ffb703;
+  --color-primary: #8ECAE6;
+  --color-secondary: #fb8500;
+  --color-tertiary: #8ECAE6;
+  --color-quaternary: #fb8500;
 }
 
 @layer base {
-  html, body, #root { @apply min-h-screen bg-background text-foreground; }
+  html, body, #root { 
+    @apply min-h-screen bg-background text-foreground/100;
+    font-family: 'PP Neue Montreal', sans-serif;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 { @apply text-4xl lg:text-5xl font-bold text-secondary; }
+  h2 { @apply text-3xl lg:text-4xl; }
+  h3 { @apply text-2xl lg:text-3xl; }
+  h4 { @apply text-xl lg:text-2xl; }
+  h5 { @apply text-lg lg:text-xl; }
+  h6 { @apply text-base lg:text-lg; }
+  
+  p { @apply text-base text-primary; }
+  
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
 }

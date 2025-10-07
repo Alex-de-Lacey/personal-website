@@ -22,7 +22,8 @@ const validateField = (field: 'name' | 'email' | 'message', value: string) => {
   }
 }
 
-const inputClassName = "block w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2 text-lg shadow-sm placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600"
+const inputClassName = "block w-full rounded-md border border-secondary/20 px-3 py-2 text-lg shadow-sm placeholder-secondary/50 focus:outline-none focus:ring-2 focus:ring-secondary/20 dark:focus:ring-secondary/20"
+const labelClassName = "text-sm font-medium text-secondary"
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -39,14 +40,6 @@ export default function Contact() {
   }
 
   const isValid = !errors.name && !errors.email && !errors.message
-
-  const handleReset = () => {
-    setSubmitted(false)
-    setName('')
-    setEmail('')
-    setMessage('')
-    setTouched({ name: false, email: false, message: false })
-  }
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -113,7 +106,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="text-sm font-medium">Message</label>
+                <label htmlFor="message" className={labelClassName}>Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -162,7 +155,7 @@ type FormFieldProps = {
 function FormField({ id, label, type, value, onChange, onBlur, error, touched, placeholder, autoComplete }: FormFieldProps) {
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-large font-medium">{label}</label>
+      <label htmlFor={id} className={labelClassName}>{label}</label>
       <input 
         id={id}
         name={id}
