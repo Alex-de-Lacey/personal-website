@@ -15,13 +15,17 @@ type CompanyContainerProps = {
 }
 
 function Line() {
-  return <div aria-hidden="true" className="h-1 bg-green-800/100 flex-1 rounded-md" />
+  return <div aria-hidden="true" className="h-1 bg-secondary flex-1 rounded-md" />
+}
+
+function Year({ year }: { year: number }) {
+  return <h3 className="m-2 text-quaternary">{year}</h3>
 }
 
 export default function CompanyContainer({ items, className = '', startYear=2019, endYear = new Date().getFullYear() }: CompanyContainerProps) {
   return (
     <div className={`w-full flex items-center${className}`}>
-      <p>{startYear}</p>
+      <Year year={startYear} />
       <Line />
       {items.map((item, index) => (
         <>
@@ -29,7 +33,7 @@ export default function CompanyContainer({ items, className = '', startYear=2019
           <Line />
         </>
       ))}
-      <p>{endYear}</p>
+      <Year year={endYear} />
     </div>
   )
 }

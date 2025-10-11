@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={handleNavClick("overview")}
-              className="text-zinc-400 text-xl hover:text-foreground hover:text-primary transition-colors cursor-pointer"
+              className="text-quaternary text-xl hover:text-foreground transition-colors cursor-pointer"
             >
               Alex 👋
             </button>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   <button
                     key={index}
                     onClick={handleNavClick(social.url.substring(1))}
-                    className="text-zinc-400 hover:text-foreground transition-colors cursor-pointer"
+                    className="text-quaternary transition-colors cursor-pointer"
                     aria-label={social.label}
                   >
                     <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
@@ -107,7 +107,7 @@ export default function Navbar() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-foreground transition-colors cursor-pointer"
+                  className="text-quaternary transition-colors cursor-pointer"
                   aria-label={social.label}
                 >
                   <FontAwesomeIcon icon={social.icon} className="text-2xl"/>

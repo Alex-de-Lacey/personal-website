@@ -60,7 +60,7 @@ export default function Company({ img, companyName, roleDescription, index = 0, 
       <img
         src={img}
         alt="company image"
-        className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-green-800/100 transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
+        className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-secondary transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
       />
       <div ref={roleDescriptionRef} className="w-24 md:w-36 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
         <p className="break-words">{roleDescription}</p>

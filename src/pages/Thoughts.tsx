@@ -28,7 +28,7 @@ export default function Thoughts() {
           </div>
         </div>
       </Section>
-      <div className="flex flex-row gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-items-center md:justify-items-stretch">
         <Thought title={thoughts[1].title} image={thoughts[1].image} date={thoughts[1].date} link={thoughts[1].link} />
         <Thought title={thoughts[0].title} image={thoughts[0].image} date={thoughts[0].date} link={thoughts[0].link} />
       </div>

@@ -39,10 +39,10 @@ export default function PageIndicator() {
           key={index}
           onClick={() => handleClick(index)}
           className={cn(
-            'w-2 h-2 rounded-full transition-all duration-300 cursor-pointer',
+            'w-3 h-3 rounded-full transition-all duration-300 cursor-pointer bg-quaternary',
             index === activeIndex 
               ? 'bg-primary scale-125' 
-              : 'bg-zinc-500 hover:bg-zinc-400'
+              : 'bg-quaternary/10 hover:bg-quaternary/50'
           )}
           aria-label={`Go to section ${index + 1}`}
         />
