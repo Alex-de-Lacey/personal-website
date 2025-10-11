@@ -27,7 +27,7 @@
   h5 { @apply text-lg lg:text-xl; }
   h6 { @apply text-base lg:text-lg; }
   
-  p { @apply text-base text-primary; }
+  p { @apply text-lg text-primary; }
   
   /* Focus styles */
   *:focus-visible {

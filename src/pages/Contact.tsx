@@ -58,7 +58,7 @@ export default function Contact() {
         <Section className="flex flex-col md:flex-row items-start md:items-center gap-10">
           <div className="space-y-4 md:flex-1 text-left">
             <Heading level={1}>Contact</Heading>
-            <Text>Get in touch.</Text>
+            <Text>Get in touch - I'm always open to exciting opportunities.</Text>
             <div className="md:flex-1 w-full">
               <div role="status" aria-live="polite" className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 bg-white/50 dark:bg-zinc-900/50">
                 <Text>Thanks for reaching out! 👋</Text>
@@ -75,7 +75,7 @@ export default function Contact() {
       <Section className="flex flex-col md:flex-row items-start md:items-center gap-10">
         <div className="space-y-4 md:flex-1 text-left">
           <Heading level={1}>Contact</Heading>
-          <Text>Get in touch.</Text>
+          <Text>Get in touch - I'm always open to exciting opportunities.</Text>
           <div className="md:flex-1 w-full">
             <form onSubmit={handleSubmit} noValidate className="space-y-4" aria-describedby="form-helper">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
