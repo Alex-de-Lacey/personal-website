@@ -23,7 +23,7 @@ const validateField = (field: 'name' | 'email' | 'message', value: string) => {
 }
 
 const inputClassName = "block w-full rounded-md border border-secondary/20 px-3 py-2 text-lg shadow-sm placeholder-secondary/50 focus:outline-none focus:ring-2 focus:ring-secondary/20 dark:focus:ring-secondary/20"
-const labelClassName = "text-sm font-medium text-secondary"
+const labelClassName = "text-lg font-medium text-secondary"
 
 export default function Contact() {
   const [name, setName] = useState('')

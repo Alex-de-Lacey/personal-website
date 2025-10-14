@@ -7,6 +7,7 @@ import {
   faGithub,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
+import ThemeToggle from './ThemeToggle';
 
 const socials = [
   {
@@ -21,7 +22,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/alex-de-lacey",
     icon: faLinkedin
   }
 ];
@@ -80,13 +81,13 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={handleNavClick("overview")}
-              className="text-quaternary text-xl hover:text-foreground transition-colors cursor-pointer"
+              className="text-primary text-xl hover:text-foreground transition-colors cursor-pointer"
             >
               Alex 👋
             </button>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links and Theme Toggle */}
           <div className="flex items-center space-x-4">
             {socials.slice(0, socials.length).map((social, index) => {
               if (social.url.startsWith('#')) {
@@ -94,10 +95,10 @@ export default function Navbar() {
                   <button
                     key={index}
                     onClick={handleNavClick(social.url.substring(1))}
-                    className="text-quaternary transition-colors cursor-pointer"
+                    className="text-primary transition-colors cursor-pointer w-6 h-6 flex items-center justify-center"
                     aria-label={social.label}
                   >
-                    <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
+                    <FontAwesomeIcon icon={social.icon} className="w-full h-full" style={{ fontSize: '24px' }}/>
                   </button>
                 );
               }
@@ -107,13 +108,14 @@ export default function Navbar() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-quaternary transition-colors cursor-pointer"
+                  className="text-primary transition-colors cursor-pointer w-6 h-6 flex items-center justify-center"
                   aria-label={social.label}
                 >
-                  <FontAwesomeIcon icon={social.icon} className="text-2xl"/>
+                  <FontAwesomeIcon icon={social.icon} className="w-full h-full" style={{ fontSize: '24px' }}/>
                 </a>
               );
             })}
+            <ThemeToggle />
           </div>
         </nav>
       </Container>

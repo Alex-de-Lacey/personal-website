@@ -20,7 +20,7 @@ function Line() {
 }
 
 function Year({ year }: { year: number }) {
-  return <h3 className="m-2 text-quaternary">{year}</h3>
+  return <h3 className="m-2 text-primary">{year}</h3>
 }
 
 export default function CompanyContainer({ items, className = '', startYear=2019, endYear = new Date().getFullYear() }: CompanyContainerProps) {
