@@ -121,7 +121,7 @@ export default function Contact() {
                   placeholder="How can I help?"
                 />
                 {touched.message && errors.message && (
-                  <p id="message-error" className="text-sm text-red-600 dark:text-red-400">{errors.message}</p>
+                  <p id="message-error" className="text-lg text-red-600 dark:text-red-400">{errors.message}</p>
                 )}
                 <p id="form-helper" className="sr-only">All fields are required.</p>
               </div>

@@ -16,7 +16,7 @@ type CompanyContainerProps = {
 }
 
 function Line() {
-  return <div aria-hidden="true" className="h-1 bg-secondary flex-1 rounded-md" />
+  return <div aria-hidden="true" className="h-1 bg-primary flex-1 rounded-md" />
 }
 
 function Year({ year }: { year: number }) {

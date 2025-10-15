@@ -31,7 +31,7 @@ export default function Company({ img, companyName, whiteBackground = false, isE
           <img
             src={img}
             alt="company image"
-            className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-secondary transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
+            className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-primary transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
           />
           <div style={{ height: nameHeight > 0 ? `${nameHeight}px` : '0' }} aria-hidden="true"/>
         </>
@@ -41,7 +41,7 @@ export default function Company({ img, companyName, whiteBackground = false, isE
           <img
             src={img}
             alt="company image"
-            className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-secondary transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
+            className={`w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-4 border-primary transition-transform duration-200 ease-out hover:scale-110 ${whiteBackground ? 'bg-white' : ''}`}
           />
           <div ref={companyNameRef} className="w-24 md:w-36 text-center">
             <p className="break-words">{companyName}</p>
