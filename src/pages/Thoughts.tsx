@@ -22,7 +22,7 @@ export default function Thoughts() {
     <PageLayout>
       <Section className ="flex flex-col">
         <div className="flex flex-col md:flex-row md:items-center">
-          <div className="space-y-4 md:flex-1">
+          <div className="space-y-4">
             <Heading level={1}>Thoughts</Heading>
             <Text>My thoughts about these very interesting topics...</Text>
           </div>

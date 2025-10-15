@@ -17,7 +17,10 @@ export default function About() {
                   I’m also interested in design. I think about design in the same way whether it’s an API, a physical space, or the way a process flows. When something feels intuitive, effortless and elegant, it’s well designed.
                 </p>
                 <p>
-                Outside of work, I enjoy reading, training martial arts, language learning and cooking international cuisines. I'm currently learning AWS Cloud Developer certificate.
+                Outside of work, I enjoy reading, training martial arts, language learning and cooking international cuisines.
+                </p>
+                <p>
+                I'm currently learning AWS Cloud Developer certificate.
                 </p>
             </div>
             <img

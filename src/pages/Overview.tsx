@@ -6,7 +6,7 @@ export default function Overview() {
   return (
     <PageLayout>
       <section className="flex md:flex-row md:items-center gap-6">
-          <div>
+          <div className="space-y-4">
               <h1>Hi, I'm Alex 👋</h1>
               <p>I’m a Product manager by trade.</p>
               <p>I currently work at PurchasePlus where I spend most of my time making our platform more streamlined and scalable with software integrations.</p>
