@@ -16,11 +16,11 @@ type CompanyContainerProps = {
 }
 
 function Line() {
-  return <div aria-hidden="true" className="h-1 bg-secondary flex-1 rounded-md" />
+  return <div aria-hidden="true" className="h-1 bg-primary flex-1 rounded-md" />
 }
 
 function Year({ year }: { year: number }) {
-  return <h3 className="m-2 text-quaternary">{year}</h3>
+  return <h3 className="m-2 text-primary">{year}</h3>
 }
 
 export default function CompanyContainer({ items, className = '', startYear=2019, endYear = new Date().getFullYear() }: CompanyContainerProps) {
