@@ -1,30 +1,33 @@
 import { Heading } from '../components/ui/Heading'
 import PageLayout from "../components/layout/PageLayout"
 import { Section } from '../components/ui/Section'
+import CompanyContainer from '../components/ui/CompanyContainer'
 
+// Import company logos
+import cbaLogo from '../assets/cba.png'
+import dmgLogo from '../assets/dmg.jpg'
+import pplusLogo from '../assets/pplus.jpg'
 
 const commonwealthBank = {
   companyName: 'Commonwealth Bank',
-  roleDescription: 'I worked on the Digital Payments Team building and improving Australia’s largest Eftpos terminal network, along with the supporting systems and infrastructure behind it.',
-  img: "src/assets/cba.png",
+  roleDescription: 'I worked on the Digital Payments Team building and improving Australia\'s largest Eftpos terminal network, along with the supporting systems and infrastructure behind it.',
+  img: cbaLogo,
   whiteBackground: true,
 }
 
 const datameshGroup = {
   companyName: 'Datamesh Group',
   roleDescription: 'I worked on the Ecommerce team at DataMesh, shaping the roadmap and building the payment gateway, settlement engine, and merchant tools powering digital payments across APAC.',
-  img: "src/assets/dmg.jpg",
+  img: dmgLogo,
   whiteBackground: false,
 }
 
 const purchasePlus = {
   companyName: 'PurchasePlus',
   roleDescription: 'At PurchasePlus, I focus on making our platform more streamlined and scalable through software integrations and product improvements.',
-  img: "src/assets/pplus.jpg",
+  img: pplusLogo,
   whiteBackground: false,
 }
-
-import CompanyContainer from '../components/ui/CompanyContainer'
 
 export default function Experience() {
   return (
