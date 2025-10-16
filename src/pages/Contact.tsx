@@ -88,7 +88,7 @@ export default function Contact() {
                   onBlur={() => setTouched(t => ({ ...t, name: true }))}
                   error={errors.name}
                   touched={touched.name}
-                  placeholder="John Cena"
+                  placeholder="Albert Einstein"
                   autoComplete="name"
                 />
                 <FormField
@@ -100,7 +100,7 @@ export default function Contact() {
                   onBlur={() => setTouched(t => ({ ...t, email: true }))}
                   error={errors.email}
                   touched={touched.email}
-                  placeholder="john@example.com"
+                  placeholder="al@example.com"
                   autoComplete="email"
                 />
               </div>
