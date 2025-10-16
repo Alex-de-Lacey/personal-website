@@ -1,5 +1,6 @@
 import { cn } from '../../lib/cn'
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
+import React from 'react'
 
 type HeadingProps = PropsWithChildren<{
   className?: string
@@ -7,7 +8,7 @@ type HeadingProps = PropsWithChildren<{
 }>
 
 export function Heading({ className, children, level = 1 }: HeadingProps) {
-  const Tag = (`h${level}` as unknown) as keyof JSX.IntrinsicElements
+  const Tag = (`h${level}` as unknown) as keyof React.JSX.IntrinsicElements
   const base =
     level === 1
       ? 'text-4xl sm:text-5xl font-extrabold tracking-tight'

@@ -1,5 +1,5 @@
 import { cn } from '../../lib/cn'
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 
 type ContainerProps = PropsWithChildren<{
   className?: string
