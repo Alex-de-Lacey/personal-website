@@ -24,7 +24,7 @@ const datameshGroup = {
 
 const purchasePlus = {
   companyName: 'PurchasePlus',
-  roleDescription: 'At PurchasePlus, I focus on making our platform more streamlined and scalable through software integrations and product improvements.',
+  roleDescription: 'At PurchasePlus, I focus on making our platform streamlined and scalable through software integrations and product improvements.',
   img: pplusLogo,
   whiteBackground: false,
 }
@@ -44,7 +44,7 @@ export default function Experience() {
           { companyName: purchasePlus.companyName, roleDescription: purchasePlus.roleDescription, img: purchasePlus.img, whiteBackground: purchasePlus.whiteBackground },
         ]}
       />
-      <a className = "text-right text-secondary" href="test.io" >Resume.pdf</a>
+      <a className = "text-right text-secondary opacity-0" href="test.io" >Resume.pdf</a>
     </PageLayout>
     
   )

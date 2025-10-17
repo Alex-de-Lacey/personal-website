@@ -79,7 +79,7 @@ export default function Contact() {
           <div className="md:flex-1 w-full">
             <form onSubmit={handleSubmit} noValidate className="space-y-4" aria-describedby="form-helper">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <FormField
+                <FormField 
                   id="name"
                   label="Full name"
                   type="text"
@@ -171,7 +171,7 @@ function FormField({ id, label, type, value, onChange, onBlur, error, touched, p
         placeholder={placeholder}
       />
       {touched && error && (
-        <p id={`${id}-error`} className="text-sm text-red-600 dark:text-red-400">{error}</p>
+        <p id={`${id}-error`} className="text-lg text-red-600 dark:text-red-400">{error}</p>
       )}
     </div>
   )
