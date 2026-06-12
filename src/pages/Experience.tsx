@@ -32,9 +32,10 @@ const purchasePlus = {
 export default function Experience() {
   return (
     <PageLayout>
-      <Section className ="flex flex-row md:items-center" >
-          <div className="space-y-4 md:flex-1">
+      <Section className ="flex flex-col md:flex-row md:items-center" >
+          <div className="space-y-2 md:flex-1">
             <Heading level={1}>Experience</Heading>
+            <p className="text-secondary/80">Hover to read more about my role.</p>
           </div>
       </Section>
       <CompanyContainer
@@ -44,7 +45,6 @@ export default function Experience() {
           { companyName: purchasePlus.companyName, roleDescription: purchasePlus.roleDescription, img: purchasePlus.img, whiteBackground: purchasePlus.whiteBackground },
         ]}
       />
-      <a className = "text-right text-secondary opacity-0" href="test.io" >Resume.pdf</a>
     </PageLayout>
     
   )
