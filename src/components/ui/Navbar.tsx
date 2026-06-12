@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={handleNavClick("overview")}
-              className="text-primary text-xl hover:text-foreground transition-colors cursor-pointer"
+              className="text-primary text-xl hover:text-foreground transition-all duration-200 ease-out hover:scale-110 cursor-pointer"
             >
               Alex 👋
             </button>
@@ -95,7 +95,7 @@ export default function Navbar() {
                   <button
                     key={index}
                     onClick={handleNavClick(social.url.substring(1))}
-                    className="text-primary transition-colors cursor-pointer w-6 h-6 flex items-center justify-center"
+                    className="text-primary transition-all duration-200 ease-out hover:scale-110 cursor-pointer w-6 h-6 flex items-center justify-center"
                     aria-label={social.label}
                   >
                     <FontAwesomeIcon icon={social.icon} className="w-full h-full" style={{ fontSize: '24px' }}/>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary transition-colors cursor-pointer w-6 h-6 flex items-center justify-center"
+                  className="text-primary transition-all duration-200 ease-out hover:scale-110 cursor-pointer w-6 h-6 flex items-center justify-center"
                   aria-label={social.label}
                 >
                   <FontAwesomeIcon icon={social.icon} className="w-full h-full" style={{ fontSize: '24px' }}/>

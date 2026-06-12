@@ -1,5 +1,5 @@
 import PageLayout from "../components/layout/PageLayout"
-import placeholderSite from '../assets/placeholder-site.png'
+import portraitImage from '../assets/cartoon-portrait_u3ic2ju3ic2ju3ic.png'
 
 export default function About() {
   return (
@@ -20,11 +20,11 @@ export default function About() {
                 Outside of work, I enjoy reading, training martial arts, language learning and cooking international cuisines.
                 </p>
                 <p>
-                I'm currently learning AWS Cloud Developer certificate.
+                I'm currently studying offensive cybersecurity through Hackthebox's Academy.
                 </p>
             </div>
             <img
-              src={placeholderSite}
+              src={portraitImage}
               alt="Alex portrait"
               className="w-24 h-24 md:w-64 md:h-64 rounded-full object-cover border border-zinc-700/50"
             />

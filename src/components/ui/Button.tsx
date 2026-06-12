@@ -8,7 +8,7 @@ export function Button({ className, variant = 'primary', ...props }: ButtonProps
   const base = 'inline-flex items-center rounded-md px-4 py-2 text-lg font-medium'
   const styles =
     variant === 'primary'
-      ? 'bg-primary text-secondary hover:opacity-90'
+      ? 'bg-primary text-background font-semibold hover:opacity-90'
       : 'border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900'
   return <button className={cn(base, styles, className)} {...props} />
 }

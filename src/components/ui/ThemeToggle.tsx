@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-12 h-6 rounded-full bg-primary/50 transition-colors duration-200 ease-in-out"
+      className="relative w-12 h-6 rounded-full bg-primary/50 transition-all duration-200 ease-out hover:scale-110 cursor-pointer"
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {/* Toggle slider */}

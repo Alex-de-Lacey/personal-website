@@ -2,26 +2,29 @@
 
 @theme {
   /* Dark mode (default) */
-  --color-background: #02283C;
-  --color-foreground: #ffb703;
-  --color-primary: #fb8500;
-  --color-secondary: #8ECAE6;
-  --color-tertiary: #8ECAE6;
+  --color-background: #011620;
+  --color-foreground: #E4EDF3;
+  --color-primary: #F2A65A;
+  --color-secondary: #9CB3C1;
+  --color-tertiary: #5FB3C9;
+  --color-heading: #FDB44E;
 }
 
 /* Light mode overrides */
 .light {
-  --color-background: #dadbe7;
-  --color-foreground: #1a1a1a;
-  --color-primary: #fb8500;
-  --color-secondary: #02283C;
-  --color-tertiary: #8ECAE6;
+  --color-background: #EEF2F5;
+  --color-foreground: #0F2630;
+  --color-primary: #C2630F;
+  --color-secondary: #3C5563;
+  --color-tertiary: #1E7A95;
+  /* Deep amber headings — warm accent that still clears WCAG AA on the light background. */
+  --color-heading: #B45309;
 }
 
 @layer base {
   html, body, #root { 
     @apply min-h-screen bg-background text-foreground/100;
-    font-family: 'PP Neue Montreal', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   /* Typography */
@@ -29,7 +32,7 @@
     @apply font-semibold tracking-tight;
   }
   
-  h1 { @apply text-4xl lg:text-5xl font-bold text-primary; }
+  h1 { @apply text-4xl lg:text-5xl font-bold text-heading; }
   h2 { @apply text-3xl lg:text-4xl; }
   h3 { @apply text-2xl lg:text-3xl; }
   h4 { @apply text-xl lg:text-2xl; }
