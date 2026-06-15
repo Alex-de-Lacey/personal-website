@@ -17,7 +17,7 @@ const socials = [
   },
   {
     label: "GitHub", 
-    url: "https://github.com/Alex-de-Lacey/personal-website",
+    url: "https://github.com/Alex-de-Lacey",
     icon: faGithub
   },
   {
