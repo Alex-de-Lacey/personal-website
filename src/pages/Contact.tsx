@@ -126,7 +126,7 @@ export default function Contact() {
                 <p id="form-helper" className="sr-only">All fields are required.</p>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center md:justify-start gap-3">
                 <Button type="submit" disabled={!isValid || submitting} aria-busy={submitting} className="disabled:opacity-60">
                   {submitting ? 'Sending…' : 'Send message'}
                 </Button>

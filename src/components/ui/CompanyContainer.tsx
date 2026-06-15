@@ -49,6 +49,26 @@ export default function CompanyContainer({ items, className = '', startYear=2019
 
   return (
     <>
+      {/* Mobile: vertical stack with descriptions always visible (no hover) */}
+      <div className="flex flex-col gap-8 md:hidden">
+        {items.map((item, index) => (
+          <div
+            key={`mobile-${item.companyName}-${index}`}
+            className="flex flex-col items-center gap-3 text-center"
+          >
+            <img
+              src={item.img}
+              alt={`${item.companyName} logo`}
+              className={`w-24 h-24 rounded-full object-cover border-4 border-primary ${item.whiteBackground ? 'bg-white' : ''}`}
+            />
+            <h3 className="text-secondary">{item.companyName}</h3>
+            <p className="text-primary">{item.roleDescription}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: horizontal hover timeline */}
+      <div className="hidden md:block">
       {/* Hidden descriptions to calculate max height */}
       <div className="invisible absolute -top-[9999px]">
         {items.map((item, index) => (
@@ -130,6 +150,7 @@ export default function CompanyContainer({ items, className = '', startYear=2019
             {item.roleDescription}
           </p>
         ))}
+      </div>
       </div>
     </>
   )

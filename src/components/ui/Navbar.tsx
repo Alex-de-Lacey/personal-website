@@ -49,7 +49,7 @@ export default function Navbar() {
     };
 
     // Find the scroll container to hide navbar on scroll
-    let scrollContainer = document.querySelector('.snap-y');
+    let scrollContainer = document.querySelector('[data-scroll-root]');
 
     if (scrollContainer) {
       scrollContainer.addEventListener("scroll", handleScroll, { passive: true });

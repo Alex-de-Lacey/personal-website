@@ -35,7 +35,7 @@ export default function Experience() {
       <Section className ="flex flex-col md:flex-row md:items-center" >
           <div className="space-y-2 md:flex-1">
             <Heading level={1}>Experience</Heading>
-            <p className="text-secondary/80">Hover to read more about my role.</p>
+            <p className="text-secondary/80 hidden md:block">Hover to read more about my role.</p>
           </div>
       </Section>
       <CompanyContainer

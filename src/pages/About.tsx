@@ -1,10 +1,10 @@
 import PageLayout from "../components/layout/PageLayout"
-import portraitImage from '../assets/cartoon-portrait_u3ic2ju3ic2ju3ic.png'
+import portraitImage from '../assets/cartoon-portrait_temple.png'
 
 export default function About() {
   return (
     <PageLayout>
-        <section className="flex md:flex-row md:items-center gap-6">
+        <section className="flex flex-col md:flex-row md:items-center gap-6">
             <div className="space-y-4">
                 <h1>About Me</h1>
                 <p>
@@ -26,7 +26,7 @@ export default function About() {
             <img
               src={portraitImage}
               alt="Alex portrait"
-              className="w-24 h-24 md:w-64 md:h-64 rounded-full object-cover border border-zinc-700/50"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-72 md:h-72 self-center md:self-auto shrink-0 rounded-full object-cover border border-zinc-700/50"
             />
         </section>
       </PageLayout>
